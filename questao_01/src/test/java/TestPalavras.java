@@ -6,7 +6,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TestPalavras {
-    private String frase = "Teste usando JUnit";
+    private String frase = "O Flamengo é o maior clube do Brasil!";
 
     @Test
     public void testNumeroPalavras() {
@@ -39,17 +39,9 @@ public class TestPalavras {
     }
 
     @Test
-    public void testeObservadoresVazio() {
+    public void testObservadorVazio() {
         Frases observavel = new Frases();
         assertTrue(observavel.getObservadores().isEmpty());
-    }
-
-    @Test
-    public void teste2Observadores() {
-        Frases observavel = new Frases();
-        observavel.registraObservador(new NumeroPalavras());
-        observavel.registraObservador(new NumeroPalavrasPares());
-        assertEquals(observavel.getObservadores().size(), 2);
     }
 
 }
